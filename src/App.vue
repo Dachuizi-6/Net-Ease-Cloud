@@ -20,4 +20,6 @@ export default {
 </script>
 
 <style land="less" rel="stylesheet/less" scoped>
+@import './reset/home.css';
+@import './reset/iconfont/iconfont.css';
 </style>
