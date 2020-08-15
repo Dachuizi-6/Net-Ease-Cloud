@@ -529,17 +529,6 @@
 <script>
 export default {
   name: "Firend",
-  data() {
-    return {
-      activeIndex: "1",
-      activeIndex2: "1",
-    };
-  },
-  methods: {
-    handleSelect(key, keyPath) {
-      console.log(key, keyPath);
-    },
-  },
 };
 </script>
 <style lang="less" rel="stylesheet/less">
@@ -548,20 +537,12 @@ a {
   // color: #333;
   color: deepskyblue;
 }
-header {
-  width: 100%;
-  .el-menu-demo {
-    width: 100%;
-  }
-}
 footer {
   width: 980px;
   min-height: 700px;
-
   _height: 700px;
   margin: 0 auto;
   background-color: #fff;
-  border: 1px solid #d3d3d3;
   border-width: 0 1px;
   display: flex;
   .left {
@@ -570,7 +551,8 @@ footer {
     _height: 700px;
     padding: 20px 30px;
     border-right: 1px solid #d3d3d3;
-
+    border-left: 1px solid #d3d3d3;
+    float: left;
     .content .content-header {
       height: 40px;
       border-bottom: 2px solid #c20c0c;
@@ -674,7 +656,9 @@ footer {
   .right {
     width: 300px;
     height: 100%;
+    float: right;
     position: relative;
+    border-right: 1px solid #d3d3d3;
     .right-content-top {
       .right-top {
         position: relative;
