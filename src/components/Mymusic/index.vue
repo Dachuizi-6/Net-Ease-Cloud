@@ -20,41 +20,55 @@
               </h2>
               <span>(2)</span>
             </div>
-            <div class="sheetList active">
-              <img src="../../../public/images/main01.jpg" alt="图片" />
-              <div class="sheetList-text">
-                <p class="sheetList-p1">我喜欢的音乐</p>
-                <p class="sheetList-p2">59首</p>
+            <a href="###">
+              <div class="sheetList active">
+                <img src="../../../public/images/main01.jpg" alt="图片" />
+                <div class="sheetList-text">
+                  <p class="sheetList-p1">我喜欢的音乐</p>
+                  <p class="sheetList-p2">59首</p>
+                </div>
               </div>
-            </div>
-            <div class="sheetList">
-              <img src="../../../public/images/main01.jpg" alt="图片" />
-              <div class="sheetList-text">
-                <p class="sheetList-p1">我喜欢的音乐</p>
-                <p class="sheetList-p2">59首</p>
+            </a>
+
+            <a href="###">
+              <div class="sheetList">
+                <img src="../../../public/images/main01.jpg" alt="图片" />
+                <div class="sheetList-text">
+                  <p class="sheetList-p1">我喜欢的音乐</p>
+                  <p class="sheetList-p2">59首</p>
+                </div>
               </div>
-            </div>
-            <div class="sheetList">
-              <img src="../../../public/images/main01.jpg" alt="图片" />
-              <div class="sheetList-text">
-                <p class="sheetList-p1">我喜欢的音乐</p>
-                <p class="sheetList-p2">59首</p>
+            </a>
+
+            <a href="###">
+              <div class="sheetList">
+                <img src="../../../public/images/main01.jpg" alt="图片" />
+                <div class="sheetList-text">
+                  <p class="sheetList-p1">我喜欢的音乐</p>
+                  <p class="sheetList-p2">59首</p>
+                </div>
               </div>
-            </div>
-            <div class="sheetList">
-              <img src="../../../public/images/main01.jpg" alt="图片" />
-              <div class="sheetList-text">
-                <p class="sheetList-p1">我喜欢的音乐</p>
-                <p class="sheetList-p2">59首</p>
+            </a>
+
+            <a href="###">
+              <div class="sheetList">
+                <img src="../../../public/images/main01.jpg" alt="图片" />
+                <div class="sheetList-text">
+                  <p class="sheetList-p1">我喜欢的音乐</p>
+                  <p class="sheetList-p2">59首</p>
+                </div>
               </div>
-            </div>
-            <div class="sheetList">
-              <img src="../../../public/images/main01.jpg" alt="图片" />
-              <div class="sheetList-text">
-                <p class="sheetList-p1">我喜欢的音乐</p>
-                <p class="sheetList-p2">59首</p>
+            </a>
+
+            <a href="###">
+              <div class="sheetList">
+                <img src="../../../public/images/main01.jpg" alt="图片" />
+                <div class="sheetList-text">
+                  <p class="sheetList-p1">我喜欢的音乐</p>
+                  <p class="sheetList-p2">59首</p>
+                </div>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>
@@ -87,11 +101,18 @@
               </div>
               <!-- 按钮 -->
               <div class="btnList">
-                <button>播放</button>
-                <button>收藏</button>
-                <button>分享</button>
-                <button>下载</button>
-                <button>评论</button>
+                <el-button class="btnitem-play" type="primary" icon="el-icon-video-play">播放</el-button>
+                <a href="###">
+                  <div class="addPlay">+</div>
+                </a>
+
+                <el-button class="btnitem-l" type="info" icon="el-icon-folder-add" plain>收藏</el-button>
+                <el-button type="info" icon="el-icon-share" plain>分享</el-button>
+                <el-button type="info" icon="el-icon-download" plain>下载</el-button>
+                <el-button type="info" plain>
+                  评论
+                  <i class="el-icon-chat-line-square el-icon--right"></i>
+                </el-button>
               </div>
             </div>
           </div>
@@ -103,13 +124,75 @@
         </div>
 
         <!-- 播放记录 -->
-        <div class="playRecord">播放记录</div>
+        <div class="playRecord">
+          <table class="playTab">
+            <thead>
+              <tr>
+                <th>SUN</th>
+                <th>歌曲标题</th>
+                <th>时长</th>
+                <th>歌手</th>
+                <th>专辑</th>
+              </tr>
+
+              <tr class="play-tr">
+                <td>1</td>
+                <td>大田后生仔</td>
+                <td>03:00</td>
+                <td>韩41/大石桥</td>
+                <td>大田后生仔</td>
+              </tr>
+              <tr class="play-tr">
+                <td>1</td>
+                <td>大田后生仔</td>
+                <td>03:00</td>
+                <td>韩41/大石桥</td>
+                <td>大田后生仔</td>
+              </tr>
+              <tr class="play-tr">
+                <td>1</td>
+                <td>大田后生仔</td>
+                <td>03:00</td>
+                <td>韩41/大石桥</td>
+                <td>大田后生仔</td>
+              </tr>
+              <tr class="play-tr">
+                <td>1</td>
+                <td>大田后生仔</td>
+                <td>03:00</td>
+                <td>韩41/大石桥</td>
+                <td>大田后生仔</td>
+              </tr>
+              <tr class="play-tr">
+                <td>1</td>
+                <td>大田后生仔</td>
+                <td>03:00</td>
+                <td>韩41/大石桥</td>
+                <td>大田后生仔</td>
+              </tr>
+            </thead>
+          </table>
+        </div>
 
         <!-- 评论 -->
         <div class="comment">
           <div class="commentList">
             <h3>评论</h3>
             <span>共 0 条评论</span>
+          </div>
+          <div class="commentBlock">
+            <img src="../../../public/images/userMin.jpg" alt />
+            <div class="commentRight">
+              <textarea class="commentText"></textarea>
+              <div class="commentExpression">
+                <i class="iconfont icon-at"></i>
+                <i class="iconfont icon-xiaolian"></i>
+                <div class="commentCount">
+                  140
+                  <span>评论</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -127,6 +210,7 @@ export default {
   components: {
     Header
   }
+
 }
 </script>
 <style lang="less" rel="stylesheet/less" scoped>
@@ -282,14 +366,34 @@ export default {
             }
           }
           .btnList {
-            width: 430px;
+            position: relative;
+            width: 450px;
             height: 31px;
-            margin: 0px -10px 25px 0px;
-            button {
-              width: 54px;
+            .el-button {
+              width: 70px;
               height: 31px;
-              border-radius: 8px;
-              margin-left: 10px;
+              border-radius: 5px;
+              text-indent: -6px;
+              padding-top: 7px;
+            }
+            .btnitem-play {
+              border-radius: 5px 0px 0px 5px;
+            }
+            .btnitem-l {
+              margin-left: 35px;
+            }
+            .addPlay {
+              position: absolute;
+              top: 0px;
+              left: 70px;
+              width: 25px;
+              height: 31px;
+              font-size: 22px;
+              color: white;
+              text-align: center;
+              border-left: 2px solid #2c669f;
+              border-radius: 0px 5px 5px 0px;
+              background-color: #409eff;
             }
           }
         }
@@ -320,7 +424,36 @@ export default {
     .playRecord {
       width: 740px;
       height: 280px;
-      background-color: skyblue;
+      // background-color: skyblue;
+      .el-table .warning-row {
+        background: oldlace;
+      }
+
+      .el-table .success-row {
+        background: #f0f9eb;
+      }
+      .playTab {
+        width: 740px;
+        height: 280px;
+        border: 1px solid #eaeaea;
+        tr {
+          width: 739px;
+          height: 39px;
+          th {
+            padding-left: 10px;
+            border-right: 1px solid #eaeaea;
+            border-bottom: 1px solid #eaeaea;
+          }
+        }
+        .play-tr {
+          td {
+            padding-left: 10px;
+          }
+        }
+        tr:nth-child(even) {
+          background-color: #f7f7f7;
+        }
+      }
     }
 
     /******************评论区域******************/
@@ -342,6 +475,49 @@ export default {
         }
         span {
           font-size: 12px;
+        }
+      }
+      .commentBlock {
+        width: 676px;
+        height: 98px;
+        // background-color: #eee;
+        margin: 30px auto;
+        img {
+          width: 50px;
+          height: 50px;
+        }
+        .commentRight {
+          float: right;
+          .commentText {
+            width: 614px;
+            height: 63px;
+            border: 1px solid #eaeaea;
+            overflow: auto;
+            resize: none;
+            // background-color: pink;
+          }
+          .commentExpression {
+            width: 614px;
+            height: 35px;
+            line-height: 35px;
+            // background-color: tomato;
+            .icon-at,
+            .icon-xiaolian {
+              font-size: 20px;
+              padding-right: 8px;
+            }
+            .commentCount {
+              float: right;
+              span {
+                display: inline-block;
+                width: 50px;
+                height: 35px;
+                text-align: center;
+                border-radius: 4px;
+                background-color: #3b8ad4;
+              }
+            }
+          }
         }
       }
     }
