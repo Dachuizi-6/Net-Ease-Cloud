@@ -26,7 +26,7 @@
     </div>
     <div class="nav-container">
       <div class="nav header-version-heart">
-        <ul class="nav-list-wrap" style="margin-bottom=0">
+        <ul class="nav-list-wrap">
           <li class="nav-item">
             <a href="javascript:;">
               <em>推荐</em>
@@ -85,7 +85,7 @@ export default {
   },
 };
 </script>
-<style lang="less" scoped>
+<style lang="less" rel="stylesheet/less" scoped>
 .header-container {
   background-color: #242424;
   height: 70px;
@@ -193,8 +193,7 @@ export default {
   background-color: #c20c0c;
   border-bottom: 1px solid #a40011;
   .nav {
-    width: 100%;
-    // height: 34px;
+    height: 34px;
     .nav-list-wrap {
       height: 34px;
       padding-left: 180px;

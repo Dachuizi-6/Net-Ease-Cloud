@@ -531,7 +531,7 @@ export default {
   name: "Firend",
 };
 </script>
-<style lang="less" rel="stylesheet/less">
+<style lang="less" rel="stylesheet/less" scoped >
 a {
   text-decoration: none;
   // color: #333;

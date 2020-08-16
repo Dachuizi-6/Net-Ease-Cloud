@@ -31,7 +31,7 @@ export default {
   name: "Musicplayer",
 };
 </script>
-<style lang="less" rel="stylesheet/less">
+<style lang="less" rel="stylesheet/less" scoped>
 .wap {
   width: 100%;
   height: 100px;
