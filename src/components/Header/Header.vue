@@ -20,7 +20,8 @@
           <i class="iconfont icon-xingtaiduICON_sousuo--"></i>
           <input type="text" placeholder="音乐/视频/电台/用户" />
           <div class="create-center">创作者中心</div>
-          <span class="login">登录</span>
+          <!-- <a class="login">登录</a> -->
+          <router-link to='/src/pages/liong' class="login">登录</router-link>
         </div>
       </div>
     </div>
@@ -63,8 +64,10 @@
   </div>
 </template>
 <script>
+import router from '../../router'
 export default {
   name: "Header",
+  router,
   data() {
     return {
       navId: 1,

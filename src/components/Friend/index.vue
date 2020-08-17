@@ -684,7 +684,7 @@ footer {
         .name {
           position: absolute;
           top: 40px;
-          left: 50px;
+          right: 10px;
           font-size: 14px;
           width: 180px;
           a {

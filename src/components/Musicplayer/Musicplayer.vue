@@ -12,12 +12,12 @@
           <div class="content-name">好运来</div>
           <div class="schedule">
             <div class="wire">
-              <span class="circle"></span>
+              <p class="circle"></p>
             </div>
             <div class="time">
-              <p class="past-time">00:00</p>
-              <p>|</p>
-              <p class="sum-time">00:00</p>
+              <span class="past-time">00:00</span>
+              <span>|</span>
+              <span class="sum-time">00:00</span>
             </div>
           </div>
         </div>
@@ -34,10 +34,10 @@ export default {
 <style lang="less" rel="stylesheet/less" scoped>
 .wap {
   width: 100%;
-  height: 100px;
+  height: 60px;
   position: fixed;
   bottom: 0;
-  background-color: dimgrey;
+  background-color: rgba(46,46,46,.7);
   .wap-content {
     position: relative;
     width: 980px;
@@ -57,9 +57,9 @@ export default {
     .right {
       width: 830px;
       height: 60px;
-      right: -75px;
+      right: -150px;
       vertical-align: middle;
-      background-color: yellow;
+      // background-color: yellow;
       position: relative;
       display: inline-block;
       .right-img {
@@ -76,7 +76,7 @@ export default {
       }
       .right-content {
         left: 60px;
-        display: inline-block;
+        // display: inline-block;
         .content-name {
           position: absolute;
           top: 0;
@@ -84,6 +84,29 @@ export default {
           font-size: 14px;
           margin-top: 10px;
           float: left;
+        }
+        .schedule {
+          position: absolute;
+          display: flex;
+          top: 40px;
+          left: 80px;
+          .wire {
+            width: 600px;
+            height: 10px;
+            border-radius: 5px;
+            background-color: black;
+            text-align: left;
+            line-height: 10px;
+            .circle {
+              width: 15px;
+              height: 15px;
+              background-color: blanchedalmond;
+            }
+          }
+          .time {
+            text-align: right;
+            margin-left: 20px;
+          }
         }
       }
     }
