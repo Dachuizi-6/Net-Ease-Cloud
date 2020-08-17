@@ -6,205 +6,44 @@
       <!-- 云特色榜单 -->
       <h2>云特色榜单</h2>
       <!-- 榜单分类小容器 -->
+
+      <!-- 小容器里面的内容 -->
+
       <div class="ts">
-        <!-- 小容器里面的内容 -->
-        <div class="ts1">
-          <a href="javascript:;">
-            <img src="./imgs/1.png" alt />
-            <span class="s1">云音乐飙升榜</span>
-            <span class="s2">每天更新</span>
-          </a>
-        </div>
+        <a href="javascript:;" class="ts1" v-for="item in rankist" :key="item.id">
+          <!-- <img src="./imgs/1.png" alt /> -->
+          <img class="ts2" :src="item.coverImgUrl" alt />
+          <p class="s1">{{item.name}}</p>
+          <p class="s2">{{item.updateFrequency}}</p>
+        </a>
       </div>
-      <div class="ts">
-        <!-- 榜单分类小容器 -->
-        <div class="ts1">
-          <a href="javascript:;">
-            <img src="./imgs/1.png" alt />
-            <span class="s1">云音乐飙升榜</span>
-            <span class="s2">每天更新</span>
-          </a>
-        </div>
-      </div>
-      <div class="ts">
-        <!-- 榜单分类小容器 -->
-        <div class="ts1">
-          <a href="javascript:;">
-            <img src="./imgs/1.png" alt />
-            <span class="s1">云音乐飙升榜</span>
-            <span class="s2">每天更新</span>
-          </a>
-        </div>
-      </div>
-      <div class="ts">
-        <!-- 榜单分类小容器 -->
-        <div class="ts1">
-          <a href="javascript:;">
-            <img src="./imgs/1.png" alt />
-            <span class="s1">云音乐飙升榜</span>
-            <span class="s2">每天更新</span>
-          </a>
-        </div>
-      </div>
+
       <!-- 全球媒体榜单 -->
-      <h2>全球媒体榜</h2>
+      <!-- <h2 class="mediaH"></h2> -->
       <!-- 榜单分类小容器 -->
-      <div class="media">
-        <!-- 小容器里面的内容 -->
-        <div class="ts">
-          <div class="ts1">
-            <a href="javascript:;">
-              <img src="./imgs/2.png" alt />
-              <span class="s1">云音乐说唱榜</span>
-              <span class="s2">刚刚更新</span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- 榜单分类小容器 -->
-      <div class="media">
-        <div class="ts">
-          <div class="ts1">
-            <a href="javascript:;">
-              <img src="./imgs/2.png" alt />
-              <span class="s1">云音乐说唱榜</span>
-              <span class="s2">刚刚更新</span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- 榜单分类小容器 -->
-      <div class="media">
-        <div class="ts">
-          <div class="ts1">
-            <a href="javascript:;">
-              <img src="./imgs/2.png" alt />
-              <span class="s1">云音乐说唱榜</span>
-              <span class="s2">刚刚更新</span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- 榜单分类小容器 -->
-      <div class="media">
-        <div class="ts">
-          <div class="ts1">
-            <a href="javascript:;">
-              <img src="./imgs/2.png" alt />
-              <span class="s1">云音乐说唱榜</span>
-              <span class="s2">刚刚更新</span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- 榜单分类小容器 -->
-      <div class="media">
-        <div class="ts">
-          <div class="ts1">
-            <a href="javascript:;">
-              <img src="./imgs/2.png" alt />
-              <span class="s1">云音乐说唱榜</span>
-              <span class="s2">刚刚更新</span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- 榜单分类小容器 -->
-      <div class="media">
-        <div class="ts">
-          <div class="ts1">
-            <a href="javascript:;">
-              <img src="./imgs/2.png" alt />
-              <span class="s1">云音乐说唱榜</span>
-              <span class="s2">刚刚更新</span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- 榜单分类小容器 -->
-      <div class="media">
-        <div class="ts">
-          <div class="ts1">
-            <a href="javascript:;">
-              <img src="./imgs/2.png" alt />
-              <span class="s1">云音乐说唱榜</span>
-              <span class="s2">刚刚更新</span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- 榜单分类小容器 -->
-      <div class="media">
-        <div class="ts">
-          <div class="ts1">
-            <a href="javascript:;">
-              <img src="./imgs/2.png" alt />
-              <span class="s1">云音乐说唱榜</span>
-              <span class="s2">刚刚更新</span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- 榜单分类小容器 -->
-      <div class="media">
-        <div class="ts">
-          <div class="ts1">
-            <a href="javascript:;">
-              <img src="./imgs/2.png" alt />
-              <span class="s1">云音乐说唱榜</span>
-              <span class="s2">刚刚更新</span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- 榜单分类小容器 -->
-      <div class="media">
-        <div class="ts">
-          <div class="ts1">
-            <a href="javascript:;">
-              <img src="./imgs/2.png" alt />
-              <span class="s1">云音乐说唱榜</span>
-              <span class="s2">刚刚更新</span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- 榜单分类小容器 -->
-      <div class="media">
-        <div class="ts">
-          <div class="ts1">
-            <a href="javascript:;">
-              <img src="./imgs/2.png" alt />
-              <span class="s1">云音乐说唱榜</span>
-              <span class="s2">刚刚更新</span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- 榜单分类小容器 -->
-      <div class="media">
-        <div class="ts">
-          <div class="ts1">
-            <a href="javascript:;">
-              <img src="./imgs/2.png" alt />
-              <span class="s1">云音乐说唱榜</span>
-              <span class="s2">刚刚更新</span>
-            </a>
-          </div>
-        </div>
-      </div>
+      <!-- <div class="media" v-for="item in list" :key="item.id"> -->
+      <!-- 小容器里面的内容 -->
+
+      <!-- <a href="javascript:;">
+            <img src="./imgs/2.png" alt />
+            <span class="s3"></span>
+            <span class="s4"></span>
+          </a>
+      </div>-->
     </div>
+
     <!-- 中间上面的容器 -->
     <div class="rankTop">
       <!-- 中上信息 -->
       <div class="msg">
         <img src="./imgs/3.png" alt />
+        <!-- <img :src="list.coverImgUrl" alt /> -->
       </div>
       <div class="msg2">
         <h2>云音乐飙升榜</h2>
         <div class="time">
           <i class="el-icon-time"></i>
-          <span class="time2">最近更新: 08月16日</span>
+          <span class="time2">最近更新: 08月19日</span>
           <span class="time3">(每天更新)</span>
         </div>
         <!-- 雪碧图的播放收藏 -->
@@ -235,7 +74,8 @@
       <span class="s4">100首歌曲</span>
       <div class="s5">
         播放:
-        <span class="s6" style="color:#c20c0c;font-weight: bold;">1891338368</span> 次
+        <span class="s6" style="color: #c20c0c; font-weight: bold;">1891338368</span>
+        次
       </div>
     </div>
     <!-- 歌曲列表的大容器 -->
@@ -245,69 +85,30 @@
       <div class="t3">时长</div>
       <div class="t4">歌手</div>
       <table>
-        <tr>
-          <td>1</td>
-          <td>
-            <i class="el-icon-video-play"></i> 天外来物
+        <tr v-for="item in singerList" :key="item.id">
+          <td class="song1" >
+            <div class="ss">
+              {{item.backgroundCoverId}}
+              <i class="el-icon-top">0</i>
+            </div>
           </td>
-          <td>04.17</td>
-          <td>薛之谦</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>
-            <i class="el-icon-video-play"></i> 天外来物
+          <td class="song2">
+            <a href class="a1">
+              <img class src="./imgs/5.png" alt />
+            </a>
+            <div class="t5">
+              <a class="a2" href>
+                <i class="el-icon-video-play"></i>
+              </a>
+              <span class="a3">天外来物</span>
+            </div>
           </td>
-          <td>04.17</td>
-          <td>薛之谦</td>
-        </tr>
-        <tr>
-          <td>1</td>
           <td>
-            <i class="el-icon-video-play"></i> 天外来物
+            <div class="t6">04.17</div>
           </td>
-          <td>04.17</td>
-          <td>薛之谦</td>
-        </tr>
-        <tr>
-          <td>1</td>
           <td>
-            <i class="el-icon-video-play"></i> 天外来物
+            <div class="t7">薛之谦</div>
           </td>
-          <td>04.17</td>
-          <td>薛之谦</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>
-            <i class="el-icon-video-play"></i> 天外来物
-          </td>
-          <td>04.17</td>
-          <td>薛之谦</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>
-            <i class="el-icon-video-play"></i> 天外来物
-          </td>
-          <td>04.17</td>
-          <td>薛之谦</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>
-            <i class="el-icon-video-play"></i> 天外来物
-          </td>
-          <td>04.17</td>
-          <td>薛之谦</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>
-            <i class="el-icon-video-play"></i> 天外来物
-          </td>
-          <td>04.17</td>
-          <td>薛之谦</td>
         </tr>
       </table>
     </div>
@@ -318,6 +119,8 @@
     </div>
     <!-- 客户评论框 -->
     <div class="comment2">
+      <div class="arrows"></div>
+      <div class="arrows1"></div>
       <img src="./imgs/1.png" class="c3" alt="用户头像" />
       <form action="save.php" method="post">
         <textarea class="c4" cols="80" rows="5"></textarea>
@@ -328,12 +131,43 @@
     <!-- 精彩评论 -->
     <h3 class="c6">精彩评论</h3>
     <!-- 精彩评论区 -->
-    <div class="comment3"></div>
+    <div class="comment3">
+      <el-pagination background layout="prev, pager, next" :total="1000" class="c7"></el-pagination>
+    </div>
   </div>
 </template>
 <script>
+
+// import { mapstate } from "vuex";
+
+import request from '../../api/ajax'
 export default {
   name: "Rank",
+  data () {
+    return {
+      rankist: {},
+      singerList: {}
+      // detail: {}
+      // top:[],
+      // bottom:[],
+    }
+  },
+  async mounted () {
+    // 请求所有榜单
+    const reqAllRankList = await request.get("/toplist")
+    this.rankist = reqAllRankList.list.splice(0, 50)
+    const { list } = await request.get("/toplist/detail")
+    // const { artistToplist } = await request.get("/toplist/detail")
+    // const { rewardToplist } = await request.get("/toplist/detail")
+    this.singerList = list
+    console.log(this.singerList);
+
+    // this.detail = reqRankList.list
+    // console.log(this.detail)
+    // this.top=list[0].tracks
+  },
+
+
 };
 </script>
 <style lang="less" rel="stylesheet/less" scoped>
@@ -350,12 +184,12 @@ export default {
   // 左侧榜单的小容器样式
   .rankList {
     width: 240px;
-    // height: 100%;
+    height: 100%;
     border-right: 1px solid #d3d3d3;
     box-sizing: border-box;
     background: rgb(249, 249, 249);
     padding: 30px 20px;
-    // position: absolute;
+
     // float: left;
     h2 {
       padding: 10px 10px 12px 0px;
@@ -365,13 +199,21 @@ export default {
       width: 200px;
       height: 62px;
       padding: 10px 0 10px 10px;
+      display: inline-block;
+      // position: relative;
       .ts1 {
         position: relative;
+        display: inline-block;
+        width: 200px;
+        height: 40px;
+        font-size: 12px;
+        margin: 8px;
+
         // 图片样式
-        .img {
+        .ts2 {
           height: 40px;
           width: 40px;
-          display: block;
+          display: inline-block;
           position: absolute;
         }
         // 图片旁边文字样式
@@ -380,9 +222,7 @@ export default {
           color: rgb(0, 0, 0);
           font-size: 12px;
           position: absolute;
-          // margin-left: 10px;
           left: 50px;
-          top: 0px;
         }
         // 图片旁边文字样式
         .s2 {
@@ -392,10 +232,38 @@ export default {
           width: 100px;
           color: rgb(153, 153, 153);
           left: 50px;
-          top: 25px;
+          top: 24px;
         }
       }
     }
+    // 全球媒体榜
+    // .mediaH {
+    //   display: inline-block;
+    //   margin-top: 250px;
+    // }
+    // .media {
+    //   width: 220px;
+    //   height: 62px;
+    //   padding: 10px 0 10px 19px;
+    //   position: relative;
+    //   .s3 {
+    //     display: block;
+    //     color: rgb(0, 0, 0);
+    //     font-size: 12px;
+    //     position: absolute;
+    //     left: 68px;
+    //     top: 8px;
+    //   }
+    //   .s4 {
+    //     display: block;
+    //     position: absolute;
+    //     font-size: 12px;
+    //     width: 100px;
+    //     color: rgb(153, 153, 153);
+    //     left: 68px;
+    //     top: 36px;
+    //   }
+    // }
   }
   // 中间上面的容器
   .rankTop {
@@ -609,7 +477,7 @@ export default {
       background-color: #f2f2f2;
     }
     .t3 {
-      width: 90px;
+      width: 110px;
       height: 38.4px;
       line-height: 38.4px;
       display: inline-block;
@@ -619,7 +487,7 @@ export default {
       background-color: #f2f2f2;
     }
     .t4 {
-      width: 173.6px;
+      width: 153.6px;
       height: 38.4px;
       line-height: 38.4px;
       display: inline-block;
@@ -636,11 +504,52 @@ export default {
       color: rgb(138, 134, 134);
       font-size: 12px;
 
+      .song1 {
+        float: left;
+        margin-left: 30px;
+        line-height: 300%;
+        .ss {
+          transform: translate(-20px, 10px);
+        }
+      }
+
       td {
         // border: 1px solid black;
         text-align: center;
         height: 50px;
         vertical-align: middle;
+        //  vertical-align:text-top;
+        // vertical-align: bottom;
+        padding: 6px 10px;
+        line-height: 18px;
+        text-align: left;
+        .a1 {
+          display: inline-block;
+          margin-top: 5px;
+        }
+        .t5 {
+          // float: left;
+          // margin-left: -60px;
+          display: inline-block;
+          // line-height: 18px;
+          // text-align: left;
+          width: 200px;
+
+          transform: translate(20px, -20px);
+        }
+
+        .t6 {
+          margin-left: 0px;
+        }
+        .t7 {
+          margin-left: 80px;
+        }
+
+        .el-icon-top {
+          font-size: 10px;
+          font-weight: 800;
+          color: tomato;
+        }
       }
       tr:nth-child(odd) {
         color: rgb(138, 134, 134);
@@ -655,7 +564,9 @@ export default {
       }
       .el-icon-video-play {
         font-size: 17px;
-        margin: 5px;
+        font-weight: 800;
+        color: #aaaaaa;
+        margin-right: 5px;
       }
     }
   }
@@ -689,6 +600,32 @@ export default {
     textarea {
       resize: none;
     }
+    .arrows {
+      position: absolute;
+      width: 0;
+      height: 0;
+      border: 8px solid rgb(202, 201, 201);
+      border-color: transparent #cac9c9 transparent transparent;
+      border-right: left;
+      top: -160px;
+      bottom: 0;
+      margin: auto 0;
+      left: 50px;
+      z-index: 9999;
+    }
+    .arrows1 {
+      position: absolute;
+      width: 0;
+      height: 0;
+      border: 7px solid rgb(202, 201, 201);
+      border-color: transparent #fff transparent transparent;
+      border-right: left;
+      top: -160px;
+      bottom: 0;
+      margin: auto 0;
+      left: 52px;
+      z-index: 9999;
+    }
     .c3 {
       width: 50px;
       height: 50px;
@@ -710,6 +647,7 @@ export default {
       border: none;
     }
   }
+  // 精彩评论
   .c6 {
     position: absolute;
     left: 280px;
@@ -729,6 +667,9 @@ export default {
     left: 280px;
     top: 1000px;
     width: 670px;
+    .c7 {
+      margin-top: 40px;
+    }
   }
 }
 </style>
