@@ -7,25 +7,14 @@
             <a href="javascript:;">网易云音乐</a>
           </h1>
           <ul class="nav-list">
-            <li class="nav-item active">
-              <a href="javascript:;">发现音乐</a>
-            </li>
-            <li class="nav-item">
-              <router-link to="/mymusic">
-                <a href="javascript:;">我的音乐</a>
-              </router-link>
-            </li>
-            <li class="nav-item">
-              <a href="javascript:;">朋友</a>
-            </li>
-            <li class="nav-item">
-              <a href="javascript:;">商城</a>
-            </li>
-            <li class="nav-item">
-              <a href="javascript:;">音乐人</a>
-            </li>
-            <li class="nav-item">
-              <a href="javascript:;">下载客户端</a>
+            <li
+              class="nav-item"
+              :class="navId === item.id ? 'active' : ''"
+              @click="handleGo(item.id)"
+              v-for="item in navList"
+              :key="item.id"
+            >
+              <a href="javascript:;">{{item.name}}</a>
             </li>
           </ul>
           <div class="search">

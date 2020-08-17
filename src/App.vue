@@ -1,21 +1,31 @@
 <template>
   <div>
     <!-- 使用组件 -->
-    <Mymusic />
+    <Header />
+    <div>
+      <router-view></router-view>
+    </div>
+    <Tail />
   </div>
 </template>
 
 <script>
 // 引入组件
-import Mymusic from './components/Mymusic/index'
+import Header from './components/Header/index'
+import Tail from "./components/Tail/Tail";
 
 export default {
   name: 'App',
 
   // 注册组件
   components: {
-    Mymusic
-  }
+    Header,
+    Tail
+  },
+  // 
+  // async mounted () {
+  //   
+  // }
 }
 </script>
 

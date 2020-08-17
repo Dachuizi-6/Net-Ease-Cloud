@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "15685378",
+      "name": "个人头像",
+      "font_class": "gerentouxiang",
+      "unicode": "e6dd",
+      "unicode_decimal": 59101
+    },
+    {
       "icon_id": "7735862",
       "name": "at",
       "font_class": "at",

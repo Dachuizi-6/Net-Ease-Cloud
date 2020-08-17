@@ -1,8 +1,5 @@
 <template>
   <div class="MymusicContainer">
-    <!-- 头部区域 使用header组件 -->
-    <Header />
-
     <!-- 主体内容区域 -->
     <div class="main">
       <!-- 左侧区域 -->
@@ -99,7 +96,7 @@
                   <span>2020-03-02 创建</span>
                 </div>
               </div>
-              <!-- 按钮 -->
+
               <div class="btnList">
                 <el-button class="btnitem-play" type="primary" icon="el-icon-video-play">播放</el-button>
                 <a href="###">
@@ -123,7 +120,6 @@
           </div>
         </div>
 
-        <!-- 播放记录 -->
         <div class="playRecord">
           <table class="playTab">
             <thead>
@@ -174,7 +170,6 @@
           </table>
         </div>
 
-        <!-- 评论 -->
         <div class="comment">
           <div class="commentList">
             <h3>评论</h3>
@@ -200,15 +195,13 @@
   </div>
 </template>
 <script>
-// 引入Header组件
-import Header from '../Header/index'
-export default {
 
+export default {
   name: "Mymusic",
 
   // 注册组件
   components: {
-    Header
+
   }
 
 }
@@ -226,6 +219,7 @@ export default {
   .mainLeft {
     width: 240px;
     height: 100%;
+    margin-top: 2px;
     border-left: 1px solid #eaeaea;
     border-right: 1px solid #eaeaea;
     background-color: #f9f9f9;
@@ -295,6 +289,7 @@ export default {
   .mainRight {
     width: 740px;
     height: 100%;
+    margin-top: 2px;
     border-right: 1px solid #eaeaea;
     // background-color: skyblue;
     /******************个人信息******************/
