@@ -1,25 +1,30 @@
 <template>
   <div id="app">
     <Header />
-    <Friend />
+    <!-- <Friend /> -->
+    <div>
+      <router-view></router-view>
+    </div>
     <Tail />
     <Musicplayer />
   </div>
 </template>
 
 <script>
-import "../src/css/home.css";
-import Friend from "./components/Friend/";
-import Header from "./components/Header/Header";
-import Musicplayer from "./components/Musicplayer/Musicplayer";
+import "./assets/css/home.css";
+// import Friend from "./components/Friend/";
+import Header from "./components/Header";
+import Musicplayer from "./components/Musicplayer";
 import Tail from "./components/Tail/Tail";
+// import liong from "./components/liong";
 export default {
   name: "App",
   components: {
-    Friend,
+    // Friend,
     Musicplayer,
     Header,
-    Tail
+    Tail,
+    // liong
   },
 };
 </script>
@@ -30,9 +35,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   /* text-align: center; */
   color: #2c3e50;
-}
-.header-version-heart {
-  width: 100%;
-  margin: 0 auto;
 }
 </style>

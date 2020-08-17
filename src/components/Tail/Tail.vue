@@ -88,29 +88,30 @@ export default {
 };
 </script>
 <style lang="less" rel="stylesheet/less">
+*{
+  margin: 0;
+  padding: 0;
+}
 .tail-wap {
   width: 100%;
   border-top: 1px solid #dadada;
   background-color: #f7f7f7;
   .tail {
     width: 980px;
-    // height: 180px;
     margin: 0 auto;
-    // top: 80%;
-    position: relative;
-    // background-color: blue;
+    margin-top: 20px;
+    // position: relative;
     overflow: hidden;
     .tail-left {
       float: left;
       width: 500px;
       height: 180px;
-      // background-color: yellow;
       p {
         font-size: 12px;
         a,
         span {
           color: #c2c2c2;
-          margin: 0 4px 0 5px;
+          margin: 0 3px 0 4px;
         }
       }
     }

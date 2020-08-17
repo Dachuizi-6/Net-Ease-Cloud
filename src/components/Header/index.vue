@@ -8,26 +8,39 @@
         <ul class="nav-list">
           <li
             class="nav-item"
-            :class="navId === item.id ? 'active' : ''"
-            @click="handleGo(item.id)"
-            v-for="item in navList"
-            :key="item.id"
           >
-            <a href="javascript:;">{{item.name}}</a>
+            <a href="javascript:;">发现音乐</a>
+          </li>
+          <li
+            class="nav-item"
+            @click="handleGo(item.id)"
+          >
+            <a href="javascript:;">我的音乐</a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <router-link to="/src/pages/Friend">
+              <a href="javascript:;">朋友</a>
+            </router-link>
           </li>
         </ul>
         <div class="search">
           <i class="iconfont icon-xingtaiduICON_sousuo--"></i>
           <input type="text" placeholder="音乐/视频/电台/用户" />
           <div class="create-center">创作者中心</div>
-          <!-- <a class="login">登录</a> -->
-          <router-link to='/src/pages/liong' class="login">登录</router-link>
+          <router-link to="/liong">
+            <a class="login">登录</a>
+          </router-link>
         </div>
+        <!-- <route-link to="/src/pages/liong">
+          <a class="login">登录</a>
+        </route-link>-->
       </div>
     </div>
     <div class="nav-container">
       <div class="nav header-version-heart">
-        <ul class="nav-list-wrap">
+        <ul class="nav-list-wrap" style="margin-bottom=0">
           <li class="nav-item">
             <a href="javascript:;">
               <em>推荐</em>
@@ -64,10 +77,8 @@
   </div>
 </template>
 <script>
-import router from '../../router'
 export default {
   name: "Header",
-  router,
   data() {
     return {
       navId: 1,
@@ -88,7 +99,7 @@ export default {
   },
 };
 </script>
-<style lang="less" rel="stylesheet/less" scoped>
+<style lang="less" scoped>
 .header-container {
   background-color: #242424;
   height: 70px;
@@ -196,7 +207,8 @@ export default {
   background-color: #c20c0c;
   border-bottom: 1px solid #a40011;
   .nav {
-    height: 34px;
+    width: 100%;
+    // height: 34px;
     .nav-list-wrap {
       height: 34px;
       padding-left: 180px;

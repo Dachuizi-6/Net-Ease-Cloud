@@ -5,13 +5,13 @@ import Liong from '../pages/liong'
 Vue.use(VueRouter)
 export default new VueRouter({
   mode:'history',
-  router:[
+  routes:[
     {
       path:'/src/pages/Friend',
       component:Friend
     },
     {
-      path:'/src/pages/liong',
+      path:'/liong',
       component:Liong
     }
   ]

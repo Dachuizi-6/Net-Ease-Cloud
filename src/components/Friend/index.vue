@@ -10,30 +10,24 @@
           </div>
           <div class="contend-bont">
             <ul class="content-items">
-              <li class="content-content">
+              <li class="content-content" v-for="(item,index) in friendLisit" :key="index">
                 <div class="content-items-left">
                   <a href="javascript:;">
-                    <img
-                      src="http://p1.music.126.net/_aEPXmHuskM-g140GROZnQ==/109951163879490620.jpg?param=45y45"
-                      alt
-                    />
+                    <img :src="item.user.avatarUrl" />
                   </a>
                 </div>
                 <div class="content-items-react">
                   <div class="items-a">
-                    <a href="javascript:;">云音乐小秘书</a>
+                    <a href="javascript:;">{{item.user.nickname}}</a>
                     <span class="el-icon-star-on"></span>
-                    <span>分享歌单</span>
+                    <span>{{item.user.description}}</span>
                   </div>
                   <div class="items-tem">08：03</div>
                   <div class="items-text-top">
-                    <a href="javascript:;">@是你的_本人</a>
-                    重新演绎的单曲《信仰》（原唱：张信哲）感性上线
-                    <img
-                      src="http://s1.music.126.net/style/web2/emt/emoji_33.png"
-                      alt
-                    />
-                    深情诠释的版本加重了孤独的感受，从初遇到陪伴，我们依附着穿过黑暗，超越极限，渐渐的在对未来的求索中将这份无法考量的彼此的爱意炼化为了信仰
+                    <a href="javascript:;">{{item.actName}}</a>
+
+                    <img src="http://s1.music.126.net/style/web2/emt/emoji_33.png" alt />
+                    {{contentLisit[index].msg}}
                     <img
                       src="http://s1.music.126.net/style/web2/emt/emoji_52.png"
                       alt
@@ -41,325 +35,28 @@
                   </div>
 
                   <div class="items-text-bot">
-                    <div class="items-paly">
+                    <!-- <div class="items-paly">
                       <span>
                         <img
-                          src="http://p3.music.126.net/WIvUzIFm3I1ehBLCcMGGgw==/109951165231154143.jpg?param=40y40&quality=100"
+                          :src="item.user.backgroundUrl"
                           alt
+                          style="width: 40px;height: 40px;"
                         />
                       </span>
                       <div class="muisc-paly">
                         <h3>Runway 2.0</h3>
-                        <h4>马伯骞/小冰</h4>
+                        <h4>{{item.actName}}</h4>
                       </div>
-                    </div>
+                    </div> -->
                     <div class="text-end">
-                      <img
-                        src="http://p1.music.126.net/QvC23ia6_fcvx0rhyME2ZA==/109951165234070309.jpg?param=525x10000"
-                        alt
-                      />
+                      <img :src="item.user.backgroundUrl" alt />
                     </div>
                     <div class="text-bot">
-                      <a>(6)</a>
+                      <span>点赞{{item.info.likedCount}}</span>
                       <span>|</span>
-                      <a>转发</a>
+                      <span>转发{{item.info.shareCount}}</span>
                       <span>|</span>
-                      <a>评论</a>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="content-content">
-                <div class="content-items-left">
-                  <a href="javascript:;">
-                    <img
-                      src="http://p1.music.126.net/_aEPXmHuskM-g140GROZnQ==/109951163879490620.jpg?param=45y45"
-                      alt
-                    />
-                  </a>
-                </div>
-                <div class="content-items-react">
-                  <div class="items-a">
-                    <a href="javascript:;">云音乐小秘书</a>
-                    <span class="el-icon-star-on"></span>
-                    <span>分享歌单</span>
-                  </div>
-                  <div class="items-tem">08：03</div>
-                  <div class="items-text-top">
-                    <a href="javascript:;">@是你的_本人</a>
-                    重新演绎的单曲《信仰》（原唱：张信哲）感性上线
-                    <img
-                      src="http://s1.music.126.net/style/web2/emt/emoji_33.png"
-                      alt
-                    />
-                    深情诠释的版本加重了孤独的感受，从初遇到陪伴，我们依附着穿过黑暗，超越极限，渐渐的在对未来的求索中将这份无法考量的彼此的爱意炼化为了信仰
-                    <img
-                      src="http://s1.music.126.net/style/web2/emt/emoji_52.png"
-                      alt
-                    />
-                  </div>
-
-                  <div class="items-text-bot">
-                    <div class="items-paly">
-                      <span>
-                        <img
-                          src="http://p3.music.126.net/WIvUzIFm3I1ehBLCcMGGgw==/109951165231154143.jpg?param=40y40&quality=100"
-                          alt
-                        />
-                      </span>
-                      <div class="muisc-paly">
-                        <h3>Runway 2.0</h3>
-                        <h4>马伯骞/小冰</h4>
-                      </div>
-                    </div>
-                    <div class="text-end">
-                      <img
-                        src="http://p1.music.126.net/QvC23ia6_fcvx0rhyME2ZA==/109951165234070309.jpg?param=525x10000"
-                        alt
-                      />
-                    </div>
-                    <div class="text-bot">
-                      <a>(6)</a>
-                      <span>|</span>
-                      <a>转发</a>
-                      <span>|</span>
-                      <a>评论</a>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="content-content">
-                <div class="content-items-left">
-                  <a href="javascript:;">
-                    <img
-                      src="http://p1.music.126.net/_aEPXmHuskM-g140GROZnQ==/109951163879490620.jpg?param=45y45"
-                      alt
-                    />
-                  </a>
-                </div>
-                <div class="content-items-react">
-                  <div class="items-a">
-                    <a href="javascript:;">云音乐小秘书</a>
-                    <span class="el-icon-star-on"></span>
-                    <span>分享歌单</span>
-                  </div>
-                  <div class="items-tem">08：03</div>
-                  <div class="items-text-top">
-                    <a href="javascript:;">@是你的_本人</a>
-                    重新演绎的单曲《信仰》（原唱：张信哲）感性上线
-                    <img
-                      src="http://s1.music.126.net/style/web2/emt/emoji_33.png"
-                      alt
-                    />
-                    深情诠释的版本加重了孤独的感受，从初遇到陪伴，我们依附着穿过黑暗，超越极限，渐渐的在对未来的求索中将这份无法考量的彼此的爱意炼化为了信仰
-                    <img
-                      src="http://s1.music.126.net/style/web2/emt/emoji_52.png"
-                      alt
-                    />
-                  </div>
-
-                  <div class="items-text-bot">
-                    <div class="items-paly">
-                      <span>
-                        <img
-                          src="http://p3.music.126.net/WIvUzIFm3I1ehBLCcMGGgw==/109951165231154143.jpg?param=40y40&quality=100"
-                          alt
-                        />
-                      </span>
-                      <div class="muisc-paly">
-                        <h3>Runway 2.0</h3>
-                        <h4>马伯骞/小冰</h4>
-                      </div>
-                    </div>
-                    <div class="text-end">
-                      <img
-                        src="http://p1.music.126.net/QvC23ia6_fcvx0rhyME2ZA==/109951165234070309.jpg?param=525x10000"
-                        alt
-                      />
-                    </div>
-                    <div class="text-bot">
-                      <a>(6)</a>
-                      <span>|</span>
-                      <a>转发</a>
-                      <span>|</span>
-                      <a>评论</a>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="content-content">
-                <div class="content-items-left">
-                  <a href="javascript:;">
-                    <img
-                      src="http://p1.music.126.net/_aEPXmHuskM-g140GROZnQ==/109951163879490620.jpg?param=45y45"
-                      alt
-                    />
-                  </a>
-                </div>
-                <div class="content-items-react">
-                  <div class="items-a">
-                    <a href="javascript:;">云音乐小秘书</a>
-                    <span class="el-icon-star-on"></span>
-                    <span>分享歌单</span>
-                  </div>
-                  <div class="items-tem">08：03</div>
-                  <div class="items-text-top">
-                    <a href="javascript:;">@是你的_本人</a>
-                    重新演绎的单曲《信仰》（原唱：张信哲）感性上线
-                    <img
-                      src="http://s1.music.126.net/style/web2/emt/emoji_33.png"
-                      alt
-                    />
-                    深情诠释的版本加重了孤独的感受，从初遇到陪伴，我们依附着穿过黑暗，超越极限，渐渐的在对未来的求索中将这份无法考量的彼此的爱意炼化为了信仰
-                    <img
-                      src="http://s1.music.126.net/style/web2/emt/emoji_52.png"
-                      alt
-                    />
-                  </div>
-
-                  <div class="items-text-bot">
-                    <div class="items-paly">
-                      <span>
-                        <img
-                          src="http://p3.music.126.net/WIvUzIFm3I1ehBLCcMGGgw==/109951165231154143.jpg?param=40y40&quality=100"
-                          alt
-                        />
-                      </span>
-                      <div class="muisc-paly">
-                        <h3>Runway 2.0</h3>
-                        <h4>马伯骞/小冰</h4>
-                      </div>
-                    </div>
-                    <div class="text-end">
-                      <img
-                        src="http://p1.music.126.net/QvC23ia6_fcvx0rhyME2ZA==/109951165234070309.jpg?param=525x10000"
-                        alt
-                      />
-                    </div>
-                    <div class="text-bot">
-                      <a>(6)</a>
-                      <span>|</span>
-                      <a>转发</a>
-                      <span>|</span>
-                      <a>评论</a>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="content-content">
-                <div class="content-items-left">
-                  <a href="javascript:;">
-                    <img
-                      src="http://p1.music.126.net/_aEPXmHuskM-g140GROZnQ==/109951163879490620.jpg?param=45y45"
-                      alt
-                    />
-                  </a>
-                </div>
-                <div class="content-items-react">
-                  <div class="items-a">
-                    <a href="javascript:;">云音乐小秘书</a>
-                    <span class="el-icon-star-on"></span>
-                    <span>分享歌单</span>
-                  </div>
-                  <div class="items-tem">08：03</div>
-                  <div class="items-text-top">
-                    <a href="javascript:;">@是你的_本人</a>
-                    重新演绎的单曲《信仰》（原唱：张信哲）感性上线
-                    <img
-                      src="http://s1.music.126.net/style/web2/emt/emoji_33.png"
-                      alt
-                    />
-                    深情诠释的版本加重了孤独的感受，从初遇到陪伴，我们依附着穿过黑暗，超越极限，渐渐的在对未来的求索中将这份无法考量的彼此的爱意炼化为了信仰
-                    <img
-                      src="http://s1.music.126.net/style/web2/emt/emoji_52.png"
-                      alt
-                    />
-                  </div>
-
-                  <div class="items-text-bot">
-                    <div class="items-paly">
-                      <span>
-                        <img
-                          src="http://p3.music.126.net/WIvUzIFm3I1ehBLCcMGGgw==/109951165231154143.jpg?param=40y40&quality=100"
-                          alt
-                        />
-                      </span>
-                      <div class="muisc-paly">
-                        <h3>Runway 2.0</h3>
-                        <h4>马伯骞/小冰</h4>
-                      </div>
-                    </div>
-                    <div class="text-end">
-                      <img
-                        src="http://p1.music.126.net/QvC23ia6_fcvx0rhyME2ZA==/109951165234070309.jpg?param=525x10000"
-                        alt
-                      />
-                    </div>
-                    <div class="text-bot">
-                      <a>(6)</a>
-                      <span>|</span>
-                      <a>转发</a>
-                      <span>|</span>
-                      <a>评论</a>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="content-content">
-                <div class="content-items-left">
-                  <a href="javascript:;">
-                    <img
-                      src="http://p1.music.126.net/_aEPXmHuskM-g140GROZnQ==/109951163879490620.jpg?param=45y45"
-                      alt
-                    />
-                  </a>
-                </div>
-                <div class="content-items-react">
-                  <div class="items-a">
-                    <a href="javascript:;">云音乐小秘书</a>
-                    <span class="el-icon-star-on"></span>
-                    <span>分享歌单</span>
-                  </div>
-                  <div class="items-tem">08：03</div>
-                  <div class="items-text-top">
-                    <a href="javascript:;">@是你的_本人</a>
-                    重新演绎的单曲《信仰》（原唱：张信哲）感性上线
-                    <img
-                      src="http://s1.music.126.net/style/web2/emt/emoji_33.png"
-                      alt
-                    />
-                    深情诠释的版本加重了孤独的感受，从初遇到陪伴，我们依附着穿过黑暗，超越极限，渐渐的在对未来的求索中将这份无法考量的彼此的爱意炼化为了信仰
-                    <img
-                      src="http://s1.music.126.net/style/web2/emt/emoji_52.png"
-                      alt
-                    />
-                  </div>
-
-                  <div class="items-text-bot">
-                    <div class="items-paly">
-                      <span>
-                        <img
-                          src="http://p3.music.126.net/WIvUzIFm3I1ehBLCcMGGgw==/109951165231154143.jpg?param=40y40&quality=100"
-                          alt
-                        />
-                      </span>
-                      <div class="muisc-paly">
-                        <h3>Runway 2.0</h3>
-                        <h4>马伯骞/小冰</h4>
-                      </div>
-                    </div>
-                    <div class="text-end">
-                      <img
-                        src="http://p1.music.126.net/QvC23ia6_fcvx0rhyME2ZA==/109951165234070309.jpg?param=525x10000"
-                        alt
-                      />
-                    </div>
-                    <div class="text-bot">
-                      <a>(6)</a>
-                      <span>|</span>
-                      <a>转发</a>
-                      <span>|</span>
-                      <a>评论</a>
+                      <span>评论{{item.info.commentCount}}</span>
                     </div>
                   </div>
                 </div>
@@ -527,8 +224,53 @@
   </div>
 </template>
 <script>
+import request from "../../utils/ajax";
+// import { extend } from 'vue/types/umd';
 export default {
   name: "Firend",
+  data() {
+    return {
+      friendLisit: {},
+      contentLisit: [],
+    };
+  },
+  async mounted() {
+    const { event } = await request.get("/event?pagesize=20");
+    // const map1 = event.map(function (item) {
+    //   return item;
+    // });
+    // console.log(map1);
+    // var arrvalue; //用于存放取出bai的数组的du值
+    // for (var i = 0; i < event.length; i++) {
+    //   let arrvalue = JSON.parse(event[i].json); //数组的索引是从0开始的
+    //   // console.log(arrvalue);
+    //   // this.contentLisit = arrvalue;
+    //   let obj1={}
+    //   // console.log(this.contentLisit);
+    //   // let obj2=extend(arrvalue)
+    //    let obj2= Object.assign(obj1, arrvalue)
+    //   console.log(obj2)
+    // }
+    // const result = event.json;
+    // console.log(result)
+    // const arr = result.map(function (result) {
+    //   return result.json;
+    // });
+    // this.contentLisit = arr;
+    // console.log(this.contentLisit);
+    // const srr = event.map()
+    // console.log(srr)
+    // const { json } = await request.get("/event?pagesize=20");
+    // let res = toString(event);
+    // console.log(res);
+    console.log(event);
+    // console.log(event[0].json)
+    event.forEach((item) => {
+      this.contentLisit.push(JSON.parse(item.json));
+    });
+    console.log(this.contentLisit);
+    this.friendLisit = event;
+  },
 };
 </script>
 <style lang="less" rel="stylesheet/less" scoped >

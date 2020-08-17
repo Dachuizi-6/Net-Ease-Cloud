@@ -3,8 +3,8 @@
     <div class="login-form">
       <div class="text">登录</div>
       <div class="form-item">
-        <input type="text" placeholder="用户名" />
-        <input type="password" placeholder="密码" />
+        <input type="text" v-model.trim="shuru" placeholder="用户名" />
+        <input type="password" v-model="mima" placeholder="密码" />
       </div>
       <div class="btn">登录</div>
       <div class="btn-back"></div>
@@ -18,6 +18,21 @@
 <script>
 export default {
   name: "liong",
+  data() {
+    return {
+      shuru: "",
+      mima: "",
+    };
+  },
+  methods: {},
+  watch: {
+    shuru(e) {
+      console.log(e);
+    },
+    mima(e) {
+      console.log(e);
+    },
+  },
 };
 </script>
 <style lang="less" rel="stylesheet/less">
