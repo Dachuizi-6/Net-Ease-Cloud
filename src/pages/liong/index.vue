@@ -3,10 +3,10 @@
     <div class="login-form">
       <div class="text">登录</div>
       <div class="form-item">
-        <input type="text" v-model.trim="shuru" placeholder="用户名" />
-        <input type="password" v-model="mima" placeholder="密码" />
+        <input type="text" v-model.trim="phone" value placeholder="用户名" />
+        <input type="password" v-model.trim="password" value placeholder="密码" />
       </div>
-      <div class="btn">登录</div>
+      <div class="btn" @click="loging">登录</div>
       <div class="btn-back"></div>
       <div class="other">
         没有账号？
@@ -16,29 +16,42 @@
   </div>
 </template>
 <script>
+import request from "../../utils/ajax";
+
 export default {
   name: "liong",
   data() {
     return {
-      shuru: "",
-      mima: "",
+      phone: "",
+      password: "",
     };
   },
-  methods: {},
+  methods: {
+    async loging() {
+      const res = await request.post("/login/cellphone", {
+        phone: this.phone,
+        password: this.password,
+        // isLogin: false,
+      });
+      console.log(res);
+      console.log(this.phone + "+" + this.password);
+    },
+  },
   watch: {
-    shuru(e) {
+    phone(e) {
       console.log(e);
     },
-    mima(e) {
+    password(e) {
       console.log(e);
     },
   },
+  menubar() {},
 };
 </script>
 <style lang="less" rel="stylesheet/less">
 .container {
   position: relative;
-  height: 500px;
+  height: 800px;
   background: linear-gradient(to right, #fbc2eb, #a6c1ee);
 }
 .login-form {
