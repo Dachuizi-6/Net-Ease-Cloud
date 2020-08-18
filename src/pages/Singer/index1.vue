@@ -95,7 +95,7 @@
           <div class="singerRight-title">推荐歌手</div>
           <div class="singerLists">
             <ul>
-              <li v-for="(item,index) in singerLists.artists" :key="index">
+              <li v-for="(item,index) in singerList" :key="index">
                 <img :src="item.picUrl" alt />
 
                 <p>
@@ -113,16 +113,14 @@
   </div>
 </template>
 <script>
-
-// 引入vuex的辅助函数
-import { mapState } from 'vuex'
+import { reqSingerList } from "../../api/index";
 export default {
 
   name: "Singer",
   // 状态数据
   data () {
     return {
-
+      singerList: []
     };
   },
   // 注册组件
@@ -130,16 +128,12 @@ export default {
 
   },
   // 
-  computed: {
-    ...mapState({
-      singerLists: state => {
-        return state.singer.singerLists
-      }
-    })
-  },
-  // 
-  mounted () {
-    this.$store.dispatch('getSingerList')
+  async mounted (area) {
+    const result = await reqSingerList(area)
+    // console.log(result.artists)
+    this.singerList = result.artists
+    // this.$store.dispatch('getSingerList') vuex没有组件化获取
+    console.log(this.$store.state.singer.singerLists)
   }
 }
 </script>

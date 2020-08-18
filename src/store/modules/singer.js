@@ -18,14 +18,16 @@ const mutations = {
 // 包含多个间接修改状态数据的方法的对象
 const actions = {
   // 获取歌手数据
-  async getSingerList ({ commit }) {
+  async getSingerList ({ commit }, area) {
     // 发送异步请求获取数据
-    const result = await reqSingerList()
+    const result = await reqSingerList(area)
+    // console.log(result)
     // 判断
     if (result.code === 200) {
-      const singerList = result.data
+      const singerLists = result
+      // console.log(singerLists)
       // 提交mutation
-      commit('RECEIVE_CATEGORY_LIST', singerList)
+      commit('RECEIVE_CATEGORY_LIST', singerLists)
     }
   }
 }
