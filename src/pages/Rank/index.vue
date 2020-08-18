@@ -9,130 +9,129 @@
 
       <!-- 小容器里面的内容 -->
 
-      <div class="ts">
-        <a href="javascript:;" class="ts1" v-for="item in rankist" :key="item.id">
+      <div class="ts" @mouseleave="rankistId=0">
+        <a
+          class="ts1"
+          v-for="item in rankist"
+          @click="toRank(item.id,item)"
+          :key="item.id"
+          :class="{tss:rankistId===item.id}"
+          @mouseenter="rankistId=item.id"
+        >
           <!-- <img src="./imgs/1.png" alt /> -->
           <img class="ts2" :src="item.coverImgUrl" alt />
           <p class="s1">{{item.name}}</p>
           <p class="s2">{{item.updateFrequency}}</p>
         </a>
       </div>
-
-      <!-- 全球媒体榜单 -->
-      <!-- <h2 class="mediaH"></h2> -->
-      <!-- 榜单分类小容器 -->
-      <!-- <div class="media" v-for="item in list" :key="item.id"> -->
-      <!-- 小容器里面的内容 -->
-
-      <!-- <a href="javascript:;">
-            <img src="./imgs/2.png" alt />
-            <span class="s3"></span>
-            <span class="s4"></span>
-          </a>
-      </div>-->
     </div>
-
-    <!-- 中间上面的容器 -->
-    <div class="rankTop">
-      <!-- 中上信息 -->
-      <div class="msg">
-        <img src="./imgs/3.png" alt />
-        <!-- <img :src="list.coverImgUrl" alt /> -->
-      </div>
-      <div class="msg2">
-        <h2>云音乐飙升榜</h2>
-        <div class="time">
-          <i class="el-icon-time"></i>
-          <span class="time2">最近更新: 08月19日</span>
-          <span class="time3">(每天更新)</span>
+    <div>
+      <!-- 中间上面的容器 -->
+      <div class="rankTop">
+        <!-- 中上信息 -->
+        <div class="msg">
+          <!-- <img src="./imgs/3.png" alt /> -->
+          <!-- <img :src="singerRank.coverImgUrl" alt /> -->
+          <img :src="topImg" alt />
         </div>
-        <!-- 雪碧图的播放收藏 -->
-        <div class="msg3">
-          <a href="javascript;:" class="bf">
-            <span>播放</span>
-          </a>
-          <a href="javascript;:" class="tj"></a>
-        </div>
-        <!-- 后面几个图标 -->
-        <a href="javascript;:" class="sc">
-          <span>(999)</span>
-        </a>
-        <a href="javascript;:" class="zf">
-          <span>转发</span>
-        </a>
-        <a href="javascript;:" class="xz">
-          <span>下载</span>
-        </a>
-        <a href="javascript;:" class="pl">
-          <span>(9999)</span>
-        </a>
-      </div>
-    </div>
-    <!-- 歌曲列表小框 -->
-    <div class="song">
-      <span class="s3">歌曲列表</span>
-      <span class="s4">100首歌曲</span>
-      <div class="s5">
-        播放:
-        <span class="s6" style="color: #c20c0c; font-weight: bold;">1891338368</span>
-        次
-      </div>
-    </div>
-    <!-- 歌曲列表的大容器 -->
-    <div class="songList">
-      <div class="t1"></div>
-      <div class="t2">标题</div>
-      <div class="t3">时长</div>
-      <div class="t4">歌手</div>
-      <table>
-        <tr v-for="item in singerList" :key="item.id">
-          <td class="song1" >
-            <div class="ss">
-              {{item.backgroundCoverId}}
-              <i class="el-icon-top">0</i>
-            </div>
-          </td>
-          <td class="song2">
-            <a href class="a1">
-              <img class src="./imgs/5.png" alt />
+        <div class="msg2">
+          <h2>云音乐飙升榜</h2>
+          <!-- <h2>{{singerRank.name}}</h2> -->
+          <div class="time">
+            <i class="el-icon-time"></i>
+            <span class="time2">最近更新: 08月19日</span>
+            <span class="time3">(每天更新)</span>
+          </div>
+          <!-- 雪碧图的播放收藏 -->
+          <div class="msg3">
+            <a href="javascript;:" class="bf">
+              <span>播放</span>
             </a>
-            <div class="t5">
-              <a class="a2" href>
-                <i class="el-icon-video-play"></i>
+            <a href="javascript;:" class="tj"></a>
+          </div>
+          <!-- 后面几个图标 -->
+          <a href="javascript;:" class="sc">
+            <span>收藏</span>
+          </a>
+          <a href="javascript;:" class="zf">
+            <span>转发</span>
+          </a>
+          <a href="javascript;:" class="xz">
+            <span>下载</span>
+          </a>
+          <a href="javascript;:" class="pl">
+            <span>评论</span>
+          </a>
+        </div>
+      </div>
+      <!-- 歌曲列表小框 -->
+      <div class="song">
+        <span class="s3">歌曲列表</span>
+        <span class="s4">100首歌曲</span>
+        <div class="s5">
+          播放:
+          <span class="s6" style="color: #c20c0c; font-weight: bold;">1891338368</span>
+          次
+        </div>
+      </div>
+      <!-- 歌曲列表的大容器 -->
+      <div class="songList">
+        <div class="t1"></div>
+        <div class="t2">标题</div>
+        <div class="t3">时长</div>
+        <div class="t4">歌手</div>
+        <table v-for="play in playLists" :key="play.id">
+          <!-- <table v-for="item in playList" :key="item.id"> -->
+          <tr>
+            <td class="song1">
+              <div class="ss">
+                <span>{{play.no}}</span>
+                <i class="el-icon-top">0</i>
+              </div>
+            </td>
+            <td class="song2">
+              <a href class="a1">
+                <!-- <img class src="./imgs/5.png" alt /> -->
+                <img class :src="play.al.picUrl" alt />
               </a>
-              <span class="a3">天外来物</span>
-            </div>
-          </td>
-          <td>
-            <div class="t6">04.17</div>
-          </td>
-          <td>
-            <div class="t7">薛之谦</div>
-          </td>
-        </tr>
-      </table>
-    </div>
-    <!-- 评论区小框 -->
-    <div class="comment">
-      <span class="c1">评论</span>
-      <span class="c2">共142461条评论</span>
-    </div>
-    <!-- 客户评论框 -->
-    <div class="comment2">
-      <div class="arrows"></div>
-      <div class="arrows1"></div>
-      <img src="./imgs/1.png" class="c3" alt="用户头像" />
-      <form action="save.php" method="post">
-        <textarea class="c4" cols="80" rows="5"></textarea>
-        <br />
-        <input class="c5" type="submit" value="评论" name="submit" />
-      </form>
-    </div>
-    <!-- 精彩评论 -->
-    <h3 class="c6">精彩评论</h3>
-    <!-- 精彩评论区 -->
-    <div class="comment3">
-      <el-pagination background layout="prev, pager, next" :total="1000" class="c7"></el-pagination>
+              <div class="t5">
+                <a class="a2" href>
+                  <i class="el-icon-video-play"></i>
+                </a>
+                <span class="a3">{{play.al.name}}</span>
+              </div>
+            </td>
+            <td>
+              <div class="t6">3.14</div>
+            </td>
+            <td>
+              <div class="t7">{{play.ar[0].name}}</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <!-- 评论区小框 -->
+      <div class="comment">
+        <span class="c1">评论</span>
+        <span class="c2">共142461条评论</span>
+      </div>
+      <!-- 客户评论框 -->
+      <div class="comment2">
+        <div class="arrows"></div>
+        <div class="arrows1"></div>
+        <img src="./imgs/1.png" class="c3" alt="用户头像" />
+        <form action="save.php" method="post">
+          <textarea class="c4" cols="80" rows="5"></textarea>
+          <br />
+          <input class="c5" type="submit" value="评论" name="submit" />
+        </form>
+      </div>
+      <!-- 精彩评论 -->
+      <h3 class="c6">精彩评论</h3>
+      <!-- 精彩评论区 -->
+      <div class="comment3">
+        <el-pagination background layout="prev, pager, next" :total="1000" class="c7"></el-pagination>
+      </div>
     </div>
   </div>
 </template>
@@ -145,28 +144,46 @@ export default {
   name: "Rank",
   data () {
     return {
-      rankist: {},
-      singerList: {}
-      // detail: {}
-      // top:[],
-      // bottom:[],
+      rankist: {}, // 存储所有榜单数据  
+      rankistId: 0, // 鼠标移入事件
+      playId: {},   // 获取歌曲的id
+      playLists: {}, //   通过请求获得播放列表的数据  
+      singerRank: [], // 中间上部分的歌曲榜
+      topImg: "",
+      // sing:{}
+    }
+  },
+  methods: {
+    // 注册点击事件
+    // 获取歌曲榜数据
+    async toRank (e, a) {
+      console.log(a);
+      this.playId = e
+      this.topImg = a.coverImgUrl
+      console.log('object', e)
+      // const { playlist } = await request.get("/top/list?id=" + this.playId)
+      const { playlist } = await request.get(`/top/list?id=${this.playId}`)
+      console.log(playlist.tracks[0]);
+      this.playLists = playlist.tracks.splice(0, 6)
+
+      //  const playlist = await request.post("/top/list", {
+      //   id: this.playId
+      // })
+      this.singerRank = playlist
+      // this.sing = playlist.ar
+      // console.log('sing', this.sing)
+      // console.log('singer', this.singerRank)
+      // console.log('play', this.playLists)
     }
   },
   async mounted () {
     // 请求所有榜单
     const reqAllRankList = await request.get("/toplist")
     this.rankist = reqAllRankList.list.splice(0, 50)
-    const { list } = await request.get("/toplist/detail")
-    // const { artistToplist } = await request.get("/toplist/detail")
-    // const { rewardToplist } = await request.get("/toplist/detail")
-    this.singerList = list
-    console.log(this.singerList);
+    // console.log('reqAllRankList', this.rankist)
 
-    // this.detail = reqRankList.list
-    // console.log(this.detail)
-    // this.top=list[0].tracks
+
   },
-
 
 };
 </script>
@@ -201,6 +218,9 @@ export default {
       padding: 10px 0 10px 10px;
       display: inline-block;
       // position: relative;
+
+      background: #e6e6e6;
+
       .ts1 {
         position: relative;
         display: inline-block;
@@ -208,7 +228,9 @@ export default {
         height: 40px;
         font-size: 12px;
         margin: 8px;
-
+        // &.ts1:hover {
+        //   background: #f4f2f2;
+        // }
         // 图片样式
         .ts2 {
           height: 40px;
@@ -233,6 +255,9 @@ export default {
           color: rgb(153, 153, 153);
           left: 50px;
           top: 24px;
+        }
+        &.tss {
+          background: #f4f2f2;
         }
       }
     }
@@ -453,6 +478,10 @@ export default {
     top: 273px;
     font-size: 12px;
     color: rgb(138, 134, 134);
+    .a1 {
+      width: 50px;
+      height: 50px;
+    }
     // padding: 0;
     .t1 {
       width: 77.2px;
