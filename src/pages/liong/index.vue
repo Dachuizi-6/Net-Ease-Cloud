@@ -24,34 +24,55 @@ export default {
     return {
       phone: "",
       password: "",
+      a:{},
+      b:{}
     };
   },
   methods: {
     async loging() {
-      const res = await request.post("/login/cellphone", {
+     
+      const { code, profile } = await request.post("/login/cellphone", {
         phone: this.phone,
         password: this.password,
         // isLogin: false,
       });
-      console.log(res);
-      console.log(this.phone + "+" + this.password);
+      // console.log(code, msg, profile);
+      // console.log(this.phone + "+" + this.password);
+      if (code === 502) {
+        alert("密码错误");
+      } else {
+        this.$router.push({ name: "Friend", query: { id: profile.userId } });
+      }
     },
   },
   watch: {
-    phone(e) {
-      console.log(e);
-    },
-    password(e) {
-      console.log(e);
-    },
+    // phone(e) {
+    //   console.log(e);
+    // },
+    // password(e) {
+    //   console.log(e);
+    // },
   },
-  menubar() {},
+  // async mounted() {
+  //   // commentCount评论
+  //   // playCount播放
+  //   // shareCount分享
+  //   // subscribedCount收藏
+  //    const {playlist} = await request.post("/top/list", {
+  //       id: 19723756,
+  //     });
+  //     this.a=playlist.tracks
+  //     this.b=playlist
+  //     console.log(this.a);
+  //     console.log(this.b.commentCount,this.b.playCount,this.b.shareCount,this.b.subscribedCount,this.b.name);
+
+  // },
 };
 </script>
-<style lang="less" rel="stylesheet/less">
+<style lang="less" rel="stylesheet/less" >
 .container {
   position: relative;
-  height: 800px;
+  height: 550px;
   background: linear-gradient(to right, #fbc2eb, #a6c1ee);
 }
 .login-form {

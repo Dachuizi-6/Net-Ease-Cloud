@@ -8,6 +8,7 @@ export default new VueRouter({
   routes:[
     {
       path:'/src/pages/Friend',
+      name:"Friend",
       component:Friend
     },
     {

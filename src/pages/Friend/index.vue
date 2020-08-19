@@ -69,31 +69,28 @@
         <div class="right-content-top">
           <div class="right-top">
             <a class="picture" href="javascript:;">
-              <img
-                src="http://p1.music.126.net/gaLRAbW7ayRVHJ9YPYnbZw==/18600438208178056.jpg?param=70y70"
-                alt
-              />
+              <img :src="userInfo.avatarUrl" alt />
             </a>
             <h5 class="name">
-              <a href="javuscript:;">笨宝贝徒弟</a>
+              <a href="javuscript:;">{{userInfo.nickname}}</a>
             </h5>
           </div>
           <ul class="right-bot">
             <li>
               <a href="javascript:;">
-                <em>0</em>
-                <i>动态</i>
+                <em>{{userInfo.vipType}}</em>
+                <i>会员等级</i>
               </a>
             </li>
             <li>
               <a href="javascript:;">
-                <em>5</em>
+                <em>{{userInfo.follows}}</em>
                 <i>关注</i>
               </a>
             </li>
             <li>
               <a href="javascript:;">
-                <em>2</em>
+                <em>{{userInfo.followeds}}</em>
                 <i>粉丝</i>
               </a>
             </li>
@@ -232,10 +229,21 @@ export default {
     return {
       friendLisit: {},
       contentLisit: [],
+      userInfo: {},
+      userId: "",
     };
   },
   async mounted() {
-    const { event } = await request.get("/event?pagesize=20");
+    this.userId = this.$route.query.id;
+    const { event } = await request.get("/event?pagesize");
+    const { profile } = await request.get("/user/detail?uid="+this.userId);
+    this.userInfo = profile;
+    console.log(this.userInfo);
+    event.forEach((item) => {
+      this.contentLisit.push(JSON.parse(item.json));
+    });
+    this.friendLisit = event;
+
     // const map1 = event.map(function (item) {
     //   return item;
     // });
@@ -263,13 +271,10 @@ export default {
     // const { json } = await request.get("/event?pagesize=20");
     // let res = toString(event);
     // console.log(res);
-    console.log(event);
+    // console.log(event);
     // console.log(event[0].json)
-    event.forEach((item) => {
-      this.contentLisit.push(JSON.parse(item.json));
-    });
-    console.log(this.contentLisit);
-    this.friendLisit = event;
+
+    // console.log(this.contentLisit);
   },
 };
 </script>
