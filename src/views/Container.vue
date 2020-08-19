@@ -4,12 +4,12 @@
       <div class="main-banner version-heart">
         <div class="version-heart">
           <div class="banner-img">
-            <swiper ref="mySwiper" :options="swiperOptions">
+            <swiper :options="swiperOptions">
               <swiper-slide v-for="item in bannerList" :key="item.encodeId">
                 <img :src="item.imageUrl" alt />
               </swiper-slide>
+              <div class="swiper-pagination" slot="pagination"></div>
             </swiper>
-            <div class="swiper-pagination" slot="pagination"></div>
           </div>
         </div>
         <div class="client-download">
@@ -38,11 +38,7 @@
       <!-- 热门推荐 -->
       <div class="bottom-container">
         <ul class="video-container">
-          <li
-            class="video-item"
-            v-for="item in recommentMusicList"
-            :key="item.id"
-          >
+          <li class="video-item" v-for="item in recommentMusicList" :key="item.id">
             <a href="javascript:;">
               <img class="video-img" v-lazy="item.picUrl" alt />
               <p class="video-title">{{ item.name }}</p>
@@ -68,11 +64,7 @@
         <el-carousel :interval="5000" arrow="always">
           <el-carousel-item v-for="newest in newestList" :key="newest.id">
             <ul class="new-disk-container">
-              <li
-                class="new-list-item"
-                v-for="item in newest.item[0]"
-                :key="item.id"
-              >
+              <li class="new-list-item" v-for="item in newest.item[0]" :key="item.id">
                 <a class="disk-img" href="javascript:;">
                   <img v-lazy="item.picUrl" alt />
                 </a>
@@ -116,18 +108,13 @@
               </div>
             </div>
           </dt>
-          <dd
-            class="top-item-wrap"
-            v-for="(songs, index) in item.tracks"
-            :key="songs.al.id"
-          >
+          <dd class="top-item-wrap" v-for="(songs, index) in item.tracks" :key="songs.al.id">
             <div class="top-item-left">
               <span class="sort">{{ index + 1 }}</span>
               <router-link
                 :to="{ path: '/playmusic', query: { id: songs.id } }"
                 class="top-item-title"
-                >{{ songs.al.name }}</router-link
-              >
+              >{{ songs.al.name }}</router-link>
             </div>
             <div class="top-item-right">
               <i class="iconfont icon-bofang"></i>
@@ -141,9 +128,7 @@
     <!-- 右侧主内容区 -->
     <div class="content-container-right">
       <div class="login">
-        <p class="login-title">
-          登录网易云音乐，可以享受无限收藏的乐趣，并且无限同步到手机
-        </p>
+        <p class="login-title">登录网易云音乐，可以享受无限收藏的乐趣，并且无限同步到手机</p>
         <router-link to="/login" class="click-login">用户登录</router-link>
       </div>
       <div class="singer-container">
@@ -175,22 +160,20 @@ import { mapState } from "vuex"
 export default {
   name: "Container",
   components: {},
-  data() {
+  data () {
     return {
       swiperOptions: {
         pagination: {
-          el: ".swiper-pagination",
+          el: '.swiper-pagination',
           type: "bullets",
         },
-        autoplay: {
-          delay: 1000,
-        },
+        autoplay: true,
         loop: true,
       },
       bannerList: [],
     }
   },
-  async mounted() {
+  async mounted () {
     // console.log("Current Swiper instance object", this.swiper)
     // this.swiper.slideTo(3, 1000, false)
 

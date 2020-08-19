@@ -3,8 +3,10 @@ import App from "./App.vue"
 
 // 引入swiper
 import VueAwesomeSwiper from "vue-awesome-swiper"
-// import "swiper/css/swiper.css"
-import "@/assets/css/swiper.css"
+
+// If you use Swiper 6.0.0 or higher
+import "swiper/swiper-bundle.css"
+Vue.use(VueAwesomeSwiper)
 
 // 引入所有的api接口
 import * as API from "./api"
@@ -25,7 +27,6 @@ import store from "./store"
 
 // console.log(router)
 Vue.use(ElementUI)
-Vue.use(VueAwesomeSwiper)
 
 Vue.prototype.$API = API
 

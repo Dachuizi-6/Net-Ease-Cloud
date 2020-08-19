@@ -42,3 +42,11 @@ export const reqSingerList = (area) => ajax.get("/artist/list", { area })
 export const reqDj = () => ajax.get("/dj/catelist")
 // 获取用户信息
 export const reqUserInfo = (uid) => ajax.post("/user/detail", { uid })
+// 音乐电台
+export const reqDjMusic = () => ajax.get("/dj/recommend")
+
+// 获取推荐节目信息
+export const reqProgram = () => ajax.get("/program/recommend")
+
+// 获取推荐节目信息
+export const reqProgramTopList = () => ajax.get("/dj/program/toplist")

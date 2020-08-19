@@ -6,6 +6,7 @@ import Friend from "@/views/Friend"
 import SongList from "@/views/songsList/songsList"
 import Singer from "@/views/Singer"
 import MyMusic from "@/views/Mymusic/index.vue"
+import Anchor from "@/views/Anchor/index.vue"
 
 export default [
   // {
@@ -49,5 +50,10 @@ export default [
   {
     path: "/singer",
     component: Singer,
+  },
+  // 电台主播
+  {
+    path: "/anchor",
+    component: Anchor,
   },
 ]

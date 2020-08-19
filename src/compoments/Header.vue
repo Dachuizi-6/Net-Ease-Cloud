@@ -25,14 +25,7 @@
         </div>
       </div>
     </div>
-    <div
-      v-if="
-        $route.path === '/dismusic' ||
-          $route.path === '/' ||
-          $route.path === '/playmusic'
-      "
-      class="nav-container"
-    >
+    <div class="nav-container">
       <div class="nav header-version-heart">
         <ul class="nav-list-wrap">
           <li class="nav-item">
@@ -51,9 +44,9 @@
             </router-link>
           </li>
           <li class="nav-item">
-            <a href="javascript:;">
+            <router-link to="/anchor" href="javascript:;">
               <em>主播电台</em>
-            </a>
+            </router-link>
           </li>
           <li class="nav-item">
             <router-link to="/singer" href="javascript:;">
@@ -68,20 +61,13 @@
         </ul>
       </div>
     </div>
-    <div
-      v-if="
-        $route.path !== '/dismusic' &&
-          $route.path !== '/' &&
-          $route.path !== 'playmusic'
-      "
-      class="color-line"
-    ></div>
+    <div class="color-line"></div>
   </div>
 </template>
 <script>
 export default {
   name: "Header",
-  data() {
+  data () {
     return {
       navId: 1,
       navList: [
@@ -96,7 +82,7 @@ export default {
   },
   // props: ["nav"],
   methods: {
-    handleGo(id) {
+    handleGo (id) {
       this.navId = id
     },
   },
