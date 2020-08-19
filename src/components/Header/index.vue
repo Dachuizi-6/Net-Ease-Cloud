@@ -32,7 +32,10 @@
             <i class="iconfont icon-xingtaiduICON_sousuo--"></i>
             <input type="text" placeholder="音乐/视频/电台/用户" />
             <div class="create-center">创作者中心</div>
-            <span class="login">登录</span>
+
+            <router-link to="/login">
+              <span class="login">登录</span>
+            </router-link>
           </div>
         </div>
       </div>
@@ -56,7 +59,9 @@
             </li>
             <li class="nav-item">
               <a href="javascript:;">
-                <em>推荐</em>
+                <router-link to="/anchor">
+                  <em>主播</em>
+                </router-link>
               </a>
             </li>
             <li class="nav-item">

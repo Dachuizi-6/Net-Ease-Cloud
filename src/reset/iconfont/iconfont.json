@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "4741266",
+      "name": "话筒",
+      "font_class": "huatong",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
       "icon_id": "15685378",
       "name": "个人头像",
       "font_class": "gerentouxiang",

@@ -195,10 +195,26 @@
   </div>
 </template>
 <script>
-
+// 引入ajax
+import { reqUserInfo } from '../../api/index'
 export default {
   name: "Mymusic",
 
+  data () {
+    return {
+      userId: ''
+    }
+  },
+
+  async mounted () {
+    // 登陆时存储的用户id
+    this.userId = this.$route.query.id
+    // 根据用户id获取用户信息
+    const result = await reqUserInfo({
+      uid: this.userId
+    })
+    console.log(result)
+  },
   // 注册组件
   components: {
 

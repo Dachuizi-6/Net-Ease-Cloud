@@ -7,6 +7,8 @@ import VueRouter from 'vue-router'
 // 引入singer组件
 import Mymusic from '../pages/Mymusic/index.vue'
 import Singer from '../pages/Singer/index.vue'
+import Login from '../pages/Login/index.vue'
+import Anchor from '../pages/Anchor/index.vue'
 
 // 声明使用路由
 Vue.use(VueRouter)
@@ -22,10 +24,23 @@ const router = new VueRouter({
       name: Mymusic,
       component: Mymusic
     },
+
     {
       path: '/singer',
       name: Singer,
       component: Singer
+    },
+
+    {
+      path: '/login',
+      name: Login,
+      component: Login
+    },
+
+    {
+      path: '/anchor',
+      name: Anchor,
+      component: Anchor
     }
     // {
     //   path: '/',
