@@ -21,12 +21,16 @@
           <i class="iconfont icon-xingtaiduICON_sousuo--"></i>
           <input type="text" placeholder="音乐/视频/电台/用户" />
           <div class="create-center">创作者中心</div>
-          <span class="login">登录</span>
+          <router-link to="/login" class="login">登录</router-link>
         </div>
       </div>
     </div>
     <div
-      v-if="$route.path === '/dismusic' || $route.path === '/'||$route.path==='/playmusic'"
+      v-if="
+        $route.path === '/dismusic' ||
+          $route.path === '/' ||
+          $route.path === '/playmusic'
+      "
       class="nav-container"
     >
       <div class="nav header-version-heart">
@@ -37,14 +41,14 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="javascript:;">
+            <router-link href="javascript:;" to="/rank">
               <em>排行榜</em>
-            </a>
+            </router-link>
           </li>
           <li class="nav-item">
-            <a href="javascript:;">
+            <router-link to="/songlist" href="javascript:;">
               <em>歌单</em>
-            </a>
+            </router-link>
           </li>
           <li class="nav-item">
             <a href="javascript:;">
@@ -52,9 +56,9 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="javascript:;">
+            <router-link to="/singer" href="javascript:;">
               <em>歌手</em>
-            </a>
+            </router-link>
           </li>
           <li class="nav-item">
             <a href="javascript:;">
@@ -65,7 +69,11 @@
       </div>
     </div>
     <div
-      v-if="$route.path !== '/dismusic' && $route.path !== '/'&&$route.path!=='playmusic'"
+      v-if="
+        $route.path !== '/dismusic' &&
+          $route.path !== '/' &&
+          $route.path !== 'playmusic'
+      "
       class="color-line"
     ></div>
   </div>
@@ -73,7 +81,7 @@
 <script>
 export default {
   name: "Header",
-  data () {
+  data() {
     return {
       navId: 1,
       navList: [
@@ -88,7 +96,7 @@ export default {
   },
   // props: ["nav"],
   methods: {
-    handleGo (id) {
+    handleGo(id) {
       this.navId = id
     },
   },

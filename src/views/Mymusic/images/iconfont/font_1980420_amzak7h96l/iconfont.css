@@ -1,0 +1,37 @@
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1597393767892'); /* IE9 */
+  src: url('iconfont.eot?t=1597393767892#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAPIAAsAAAAACIAAAAN8AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDSAqDZINJATYCJAMYCw4ABCAFhG0HZxuOB8gekiQBCgIFQSWCFDRP8QC/pr4Pd0lKqDpgVgyKwBG7bmoTjoSuR2EHAHo6k2v6MGzZDjMiUAzJ91fOZwCskBWpzfUmDIOsm3CUwB/519+betVKHa9rd93lvau10Z9QOJzxTIB6BwrZBSSiHoXyvDQFt0J86WsCGozhj96UmV9E2cjcmwLCBZ6rp2wqfnlgNKgKyo4ns/BIoRofxAs8TH4//LMgVImKxL1v56mMJir5Z5i5ir1X7xeRGLaLQn2OhFkomXCrM34Fm9VnYTXY51vYjNKkKspb7SPaHG/OM1f916mY3XTQ5P3LI8miQiCUMNwEtrJR8HNhICPxc5mMzM9VMiI/t+inOo7CeFvucsMrmnEb5RuXMcsdQZQlKTV11JqEteq/MeWLRSWVz8+lj4/FDw9FT0/GkvNnOraWlHD9+qnnpGLu7G7gfuq2/0bBIyNPT2W+z2lzwXsd157XPLwUPb4WP7+XPr21ieK97uKkkiFXyYbEziWPlrIn56d6OeYYkl9TWrbV3QmDg1EzN3chtDAKhrk4e9Tv6srXHUUz/QMD/bBEBuKYlIk+5b7T3UfV699X4Kl4/20Mh8rpjYg43Cg6TTstL38iIwOUmLNOg0n+I8kbPBQhaUN7k7GP1wHZ/cHBD2enY6efpZfX7DMi4tDMCdHCVab885NhMRHDzEl3796r+CW7JZxx33dYUHAQEprc7wrcclUSUZ/tT1XuUPzskTznOjiHPv/f2JUPttXKV/2vNmbw7qiGS/J12fRGVUQ1fGzDREJ2TG6gzNbuYEFAaXapS0SDd4hPnO7wtVWyG1VEg6pmAEQVfZBUTSJn+iwoNFoEpaq10GCmrOcbdcJYIdcww4iAoM0JRC0GIWlzSc70Tyj0+IZSW0jQYH/ofGOjKeGsaCOG9QQ2gYYOwDfqdcgPEVE6WgC5Fk09LpsSYQnEAl8CIYHB9VYW1EG8xT1CKxdKCAII67UgU3wPajR6YMD6ZthIAlWEGGKDglDXDwU26rWUyEYYVI+AmgANOgC8Rno6KDqaEDX2XwDitNCohwd22tolIEzAnx4IESh4AjnLrpu08yrnC1pxQhEE4nUIpqcFZKIb0tDQO3ZD92XNoEZEINWCqkGsIO8gNNUeeLxT+5SPQQP3kTLEkEIORShDxS2dEECgQMJzdpjtRgshBLFQigI=') format('woff2'),
+  url('iconfont.woff?t=1597393767892') format('woff'),
+  url('iconfont.ttf?t=1597393767892') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1597393767892#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-icon-test4:before {
+  content: "\e65c";
+}
+
+.icon-icon-test3:before {
+  content: "\e63c";
+}
+
+.icon-icon-test:before {
+  content: "\e633";
+}
+
+.icon-icon-test1:before {
+  content: "\e638";
+}
+
+.icon-icon-test2:before {
+  content: "\e64b";
+}
+

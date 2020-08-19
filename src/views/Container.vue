@@ -10,8 +10,6 @@
               </swiper-slide>
             </swiper>
             <div class="swiper-pagination" slot="pagination"></div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
           </div>
         </div>
         <div class="client-download">
@@ -40,9 +38,13 @@
       <!-- 热门推荐 -->
       <div class="bottom-container">
         <ul class="video-container">
-          <li class="video-item" v-for="item in recommentMusicList" :key="item.id">
+          <li
+            class="video-item"
+            v-for="item in recommentMusicList"
+            :key="item.id"
+          >
             <a href="javascript:;">
-              <img class="video-img" :src="item.picUrl" alt />
+              <img class="video-img" v-lazy="item.picUrl" alt />
               <p class="video-title">{{ item.name }}</p>
             </a>
           </li>
@@ -66,9 +68,13 @@
         <el-carousel :interval="5000" arrow="always">
           <el-carousel-item v-for="newest in newestList" :key="newest.id">
             <ul class="new-disk-container">
-              <li class="new-list-item" v-for="item in newest.item[0]" :key="item.id">
+              <li
+                class="new-list-item"
+                v-for="item in newest.item[0]"
+                :key="item.id"
+              >
                 <a class="disk-img" href="javascript:;">
-                  <img :src="item.picUrl" alt />
+                  <img v-lazy="item.picUrl" alt />
                 </a>
                 <a class="disk-title-singer" href="javascript:;">
                   <p class="title">{{ item.name }}</p>
@@ -100,7 +106,7 @@
         <dl class="top-list" v-for="item in topList" :key="item.id">
           <dt class="top-title-wrap">
             <div class="top-img">
-              <img :src="item.coverImgUrl" alt />
+              <img v-lazy="item.coverImgUrl" alt />
             </div>
             <div class="top-title">
               <a href="javascript:;">{{ item.name }}</a>
@@ -110,13 +116,18 @@
               </div>
             </div>
           </dt>
-          <dd class="top-item-wrap" v-for="(songs,index) in item.tracks" :key="songs.al.id">
+          <dd
+            class="top-item-wrap"
+            v-for="(songs, index) in item.tracks"
+            :key="songs.al.id"
+          >
             <div class="top-item-left">
-              <span class="sort">{{index+1}}</span>
+              <span class="sort">{{ index + 1 }}</span>
               <router-link
-                :to="{path:'/playmusic',query:{id:songs.id}}"
+                :to="{ path: '/playmusic', query: { id: songs.id } }"
                 class="top-item-title"
-              >{{songs.al.name}}</router-link>
+                >{{ songs.al.name }}</router-link
+              >
             </div>
             <div class="top-item-right">
               <i class="iconfont icon-bofang"></i>
@@ -130,8 +141,10 @@
     <!-- 右侧主内容区 -->
     <div class="content-container-right">
       <div class="login">
-        <p class="login-title">登录网易云音乐，可以享受无限收藏的乐趣，并且无限同步到手机</p>
-        <a class="click-login">用户登录</a>
+        <p class="login-title">
+          登录网易云音乐，可以享受无限收藏的乐趣，并且无限同步到手机
+        </p>
+        <router-link to="/login" class="click-login">用户登录</router-link>
       </div>
       <div class="singer-container">
         <div class="singer-top">
@@ -141,7 +154,7 @@
         <ul class="singer-list">
           <li class="singer-item" v-for="item in topArtistsList" :key="item.id">
             <a class="singer-to" href="javascript:;">
-              <img class="singer-img" :src="item.picUrl" alt />
+              <img class="singer-img" v-lazy="item.picUrl" alt />
               <div class="singer-detail">
                 <h5 class="singer-name">{{ item.name }}</h5>
                 <!-- <p class="singer-pos">台湾歌手张惠妹</p> -->
@@ -162,7 +175,7 @@ import { mapState } from "vuex"
 export default {
   name: "Container",
   components: {},
-  data () {
+  data() {
     return {
       swiperOptions: {
         pagination: {
@@ -173,12 +186,11 @@ export default {
           delay: 1000,
         },
         loop: true,
-        // Some Swiper option/callback...
       },
       bannerList: [],
     }
   },
-  async mounted () {
+  async mounted() {
     // console.log("Current Swiper instance object", this.swiper)
     // this.swiper.slideTo(3, 1000, false)
 
@@ -207,6 +219,12 @@ export default {
 }
 </script>
 <style lang="less" scoped>
+.banner-img /deep/ .swiper-container,
+.swiper-wrapper,
+.swiper-slide {
+  width: 726px;
+  height: 285px;
+}
 .content-container {
   overflow: hidden;
   border: 1px solid #eee;
@@ -239,7 +257,7 @@ export default {
   }
   .content-container-left {
     float: left;
-    width: 728px;
+    width: 726px;
     padding: 20px 20px 40px;
     box-sizing: border-box;
     // border-left: 1px solid #eee;
@@ -514,7 +532,7 @@ export default {
   }
   .content-container-right {
     float: right;
-    width: 250px;
+    width: 252px;
     border-left: 1px solid #eee;
     .login {
       width: 100%;

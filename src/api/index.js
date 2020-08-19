@@ -28,3 +28,17 @@ export const reqMusicUrl = (id) => ajax.get(`/song/url?id=${id}`)
 
 // 获取歌词
 export const reqMusicWords = (id) => ajax.get(`/lyric?id=${id}`)
+
+// 歌单接口
+export const reqGetPlayList = () => ajax.get(`/top/playlist/`)
+//获取歌曲分类列表
+export const reqGetSongList = () => ajax.get(`/playlist/catlist/`)
+//热门歌单分类
+export const reqHotPlayList = () => ajax.get("/top/playlist/")
+
+// 获取歌手列表
+export const reqSingerList = (area) => ajax.get("/artist/list", { area })
+// 主播电台列表
+export const reqDj = () => ajax.get("/dj/catelist")
+// 获取用户信息
+export const reqUserInfo = (uid) => ajax.post("/user/detail", { uid })

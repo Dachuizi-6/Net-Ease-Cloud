@@ -13,6 +13,13 @@ import * as API from "./api"
 import ElementUI from "element-ui"
 import "element-ui/lib/theme-chalk/index.css"
 
+// 引入懒加载
+import VueLazyload from "vue-lazyload"
+import loading from "@/assets/img/timg.gif"
+Vue.use(VueLazyload, {
+  loading,
+})
+
 import router from "./router"
 import store from "./store"
 
