@@ -1,13 +1,14 @@
 module.exports = {
+  lintOnSave: false,
   devServer: {
     open: true,
     proxy: {
       "/api": {
-        target: "<url>",
-        ws: true,
+        target: "http://localhost:3000",
+        // ws: true,
         changeOrigin: true,
         pathRewrite: {
-          "^/api": "",
+          "^/api": "", // 重置为空
         },
       },
     },

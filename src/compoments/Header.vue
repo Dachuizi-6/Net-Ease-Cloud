@@ -13,7 +13,8 @@
             v-for="item in navList"
             :key="item.id"
           >
-            <a href="javascript:;">{{ item.name }}</a>
+            <!-- <a href="javascript:;">{{ item.name }}</a> -->
+            <router-link :to="item.togo">{{ item.name }}</router-link>
           </li>
         </ul>
         <div class="search">
@@ -24,50 +25,70 @@
         </div>
       </div>
     </div>
-    <div class="nav-container">
+    <div
+      v-if="$route.path === '/dismusic' || $route.path === '/'||$route.path==='/playmusic'"
+      class="nav-container"
+    >
       <div class="nav header-version-heart">
         <ul class="nav-list-wrap">
           <li class="nav-item">
-            <a href="javascript:;"><em>推荐</em></a>
+            <a href="javascript:;">
+              <em>推荐</em>
+            </a>
           </li>
           <li class="nav-item">
-            <a href="javascript:;"><em>推荐</em></a>
+            <a href="javascript:;">
+              <em>排行榜</em>
+            </a>
           </li>
           <li class="nav-item">
-            <a href="javascript:;"><em>推荐</em></a>
+            <a href="javascript:;">
+              <em>歌单</em>
+            </a>
           </li>
           <li class="nav-item">
-            <a href="javascript:;"><em>推荐</em></a>
+            <a href="javascript:;">
+              <em>主播电台</em>
+            </a>
           </li>
           <li class="nav-item">
-            <a href="javascript:;"><em>推荐</em></a>
+            <a href="javascript:;">
+              <em>歌手</em>
+            </a>
           </li>
           <li class="nav-item">
-            <a href="javascript:;"><em>推荐</em></a>
+            <a href="javascript:;">
+              <em>新碟上架</em>
+            </a>
           </li>
         </ul>
       </div>
     </div>
+    <div
+      v-if="$route.path !== '/dismusic' && $route.path !== '/'&&$route.path!=='playmusic'"
+      class="color-line"
+    ></div>
   </div>
 </template>
 <script>
 export default {
   name: "Header",
-  data() {
+  data () {
     return {
       navId: 1,
       navList: [
-        { id: 1, name: "发现音乐" },
-        { id: 2, name: "我的音乐" },
-        { id: 3, name: "朋友" },
-        { id: 4, name: "商城" },
-        { id: 5, name: "音乐人" },
-        { id: 6, name: "下载客户端" },
+        { id: 1, name: "发现音乐", togo: "/dismusic" },
+        { id: 2, name: "我的音乐", togo: "/mymusic" },
+        { id: 3, name: "朋友", togo: "/friend" },
+        { id: 4, name: "商城", togo: "/shop" },
+        { id: 5, name: "音乐人", togo: "/musicartist" },
+        { id: 6, name: "下载客户端", togo: "download" },
       ],
     }
   },
+  // props: ["nav"],
   methods: {
-    handleGo(id) {
+    handleGo (id) {
       this.navId = id
     },
   },
@@ -180,6 +201,7 @@ export default {
   box-sizing: border-box;
   background-color: #c20c0c;
   border-bottom: 1px solid #a40011;
+  // padding-top: 1px;
   .nav {
     height: 34px;
     .nav-list-wrap {
@@ -187,7 +209,7 @@ export default {
       padding-left: 180px;
       .nav-item {
         float: left;
-        width: 84px;
+        // width: 84px;
         height: 34px;
         text-align: center;
         line-height: 34px;
@@ -196,7 +218,7 @@ export default {
         }
         a {
           display: inline-block;
-          width: 84px;
+          // width: 84px;
           height: 34px;
           color: #fff;
           font-size: 12px;
@@ -217,5 +239,10 @@ export default {
       }
     }
   }
+}
+.color-line {
+  width: 100%;
+  height: 5px;
+  background-color: #c20c0c;
 }
 </style>

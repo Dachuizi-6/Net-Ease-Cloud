@@ -1,10 +1,13 @@
 <template>
   <div>
     <Home />
+    <!-- <div class="main-cointer version-heart">
+      <router-view></router-view>
+    </div> -->
   </div>
 </template>
 <script>
-import Home from "./views/Home"
+import Home from "./compoments/Home"
 export default {
   name: "App",
   components: {
